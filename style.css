@@ -1,0 +1,18 @@
+*   {
+    margin: 0px;
+}
+body{
+    border: 5px solid white;
+    box-sizing: border-box;
+    background: blue;
+    min-height: 100vh;
+
+
+button  {
+    font-size: 20px;
+    height: 70px;
+    width: 70px;
+    padding: 5px;
+    font-weight: bold;
+    
+}}
