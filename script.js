@@ -7,6 +7,9 @@ const inputContent = []
 
 let newEntry
 
+let data1
+let data2
+
 
 function int1() {
     newEntry = 1
@@ -78,7 +81,7 @@ function int0() {
     input.value = inputContent.join("")
     console.log(inputContent.join(""))
 }
-function comma() {
+function decimalSeparator() {
     newEntry = "."
     inputContent.push(newEntry)
     console.log(inputContent)
@@ -87,6 +90,8 @@ function comma() {
 }
 function addition()  {
     newEntry = ('  +  ')
-    input.value = inputContent.join("") + newEntry
+    data1 = inputContent.join("")
+    input.value = newEntry
+    p.innerText = data1
     console.log(input.value)
 }
