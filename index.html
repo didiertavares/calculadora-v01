@@ -8,13 +8,12 @@
 </head>
 <body>
     <section>
-        <input placeholder="entre os dados">
         <p>0</p>
         <div>
-            <button onclick="addition()">+</button>
-            <button>-</button>
-            <button>x</button>
-            <button>/</button>
+            <button class="op" value="+">+</button>
+            <button class="op" value="-">-</button>
+            <button class="op" value="*">*</button>
+            <button class="op" value="/">/</button>
         </div>
         <div>
              <button>y²</button>
@@ -23,31 +22,32 @@
             <button>√</button>
         </div>
         <div>
-            <button>π</button>
-            <button>(  )</button>
-            <button>%</button>
-            <button>⤌</button>
+            <button id="π">π</button>
+            <button id="()">( )</button>
+            <button id="%">%</button>
+            <button id="del">⤌</button>
         </div>
         
         <div>
-            <button onclick="int7()">7</button>
-            <button onclick="int8()">8</button>
-            <button onclick="int9()">9</button>
+            <button class="key" value="7">7</button>
+            <button class="key" value="8">8</button>
+            <button class="key" value="9">9</button>
         </div>
         <div>
-            <button onclick="int4()">4</button>
-            <button onclick="int5()">5</button>
-            <button onclick="int6()">6</button>
+            <button class="key" value="4">4</button>
+            <button class="key" value="5">5</button>
+            <button class="key" value="6">6</button>
         </div>
         <div>
-            <button onclick="int1()">1</button>
-            <button onclick="int2()">2</button>
-            <button onclick="int3()">3</button>
+            <button class="key" value="1">1</button>
+            <button class="key" value="2">2</button>
+            <!-- <button onclick="int3()">3</button> -->
+            <button class="key" value="3">3</button>
         </div>
         <div>
-            <button onclick="int0()">0</button>
-            <button onclick="decimalSeparator()">,</button>
-            <button>enter</button>
+            <button class="key" value="0">0</button>
+            <button class="key" value=".">.</button>
+            <button id="enter">enter</button>
         </div>
 
 
