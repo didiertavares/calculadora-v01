@@ -24,7 +24,13 @@ keypad.forEach(button => {
         dataFormatted = Number(data.join(''))
         display.innerText = dataFormatted
         console.log(typeof dataFormatted)
+        console.log(dataFormatted)
+        // if (savedData1 === result) {
+        //     //do nothing
+        // } else {
         savedData1 = dataFormatted
+        // }
+        
         console.log(savedData1)
     })
 })
@@ -57,9 +63,7 @@ function calculus() {
     }
     console.log(result)
     display.innerText = result
-    savedData1 = result
-    data.length = 0
-    console.log(data)
+    // savedData1 = result
 }
 
 enterButton.addEventListener('click', calculus)
