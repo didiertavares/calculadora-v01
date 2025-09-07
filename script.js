@@ -18,6 +18,7 @@ let operValue
 keypad.forEach(button => {
     button.addEventListener('click', function() {
         keyValue = this.value
+        console.log(result)
         console.log('clicked button value:', keyValue)
         data.push(keyValue)
         console.log(data)
@@ -25,19 +26,25 @@ keypad.forEach(button => {
         display.innerText = dataFormatted
         console.log(typeof dataFormatted)
         console.log(dataFormatted)
-        // if (savedData1 === result) {
-        //     //do nothing
-        // } else {
-        savedData1 = dataFormatted
-        // }
-        
-        console.log(savedData1)
+        // console.log(result)
     })
 })
 
+function deleteNumber() {
+    data.pop()
+    dataFormatted = Number(data.join(''))
+    display.innerText = dataFormatted
+}
+
 mathOps.forEach(button => {
     button.addEventListener('click', function() {
-        
+        if (savedData1 == null) {
+            savedData1 = dataFormatted
+        } else {
+            // do nothing
+        }
+        console.log(savedData1)
+        console.log(savedData2)
         data.length = 0
         console.log(data)
         operValue = this.value
@@ -48,23 +55,29 @@ mathOps.forEach(button => {
 })
 
 function calculus() {
+    savedData2 = dataFormatted
     if (operValue === '+') {
-        result = savedData1 + dataFormatted
+        result = (savedData1 + savedData2).toFixed(2)
     } else if (operValue === "-") {
-        result = savedData1 - dataFormatted
+        result = (savedData1 - savedData2).toFixed(2)
     } else if (operValue === "*") {
-        result = savedData1 * dataFormatted
+        result = (savedData1 * savedData2).toFixed(2)
     } else {
-        if (dataFormatted === 0) {
+        if (savedData2 === 0) {
             result = "Error"
         } else {
-            result = savedData1 / dataFormatted
+            result = (savedData1 / savedData2).toFixed(2)
         }
+    // } else if (operValue === "y²") {
+    //     result = savedData1 ** savedData2
+    // } else {
     }
     console.log(result)
     display.innerText = result
-    // savedData1 = result
+    savedData1 = result
 }
+
+
 
 enterButton.addEventListener('click', calculus)
 
