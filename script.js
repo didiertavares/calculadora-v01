@@ -56,7 +56,7 @@ mathOps.forEach(button => {
 
 function calculus() {
     savedData2 = dataFormatted
-    if (operValue === '+') {    // } else {
+    if (operValue === '+') {
         result = (savedData1 + savedData2).toFixed(2)
     } else if (operValue === "-") {
         result = (savedData1 - savedData2).toFixed(2)
