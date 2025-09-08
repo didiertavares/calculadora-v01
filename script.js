@@ -64,7 +64,7 @@ function calculus() {
         result = (savedData1 * savedData2).toFixed(2)
     } else if (operValue === "/") {
         if (savedData2 === 0) {
-            result = "Error"
+            result = "error"
         } else {
             result = (savedData1 / savedData2).toFixed(2)
         }
