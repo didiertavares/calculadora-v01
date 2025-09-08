@@ -23,11 +23,10 @@ section {
     height: 530px;
     max-height: 100%;
     width: 425px;
-    max-width: 100%;
+    max-width: 90%;
     margin: auto;
     background: linear-gradient(black,white);
     box-shadow: 5px 5px 7px black;
-    max-width: 90%;
     flex-wrap: wrap;
 }
 button  {
