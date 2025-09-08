@@ -56,42 +56,28 @@ mathOps.forEach(button => {
 
 function calculus() {
     savedData2 = dataFormatted
-    if (operValue === '+') {
+    if (operValue === '+') {    // } else {
         result = (savedData1 + savedData2).toFixed(2)
     } else if (operValue === "-") {
         result = (savedData1 - savedData2).toFixed(2)
     } else if (operValue === "*") {
         result = (savedData1 * savedData2).toFixed(2)
-    } else {
+    } else if (operValue === "/") {
         if (savedData2 === 0) {
             result = "Error"
         } else {
             result = (savedData1 / savedData2).toFixed(2)
         }
-    // } else if (operValue === "y²") {
-    //     result = savedData1 ** savedData2
-    // } else {
+    } else if (operValue ==='²') {
+        result = (savedData1 ** 2).toFixed(2)
+    } else if (operValue ==='yˣ') {
+        result = (savedData1 ** savedData2).toFixed(2)
+    } else {
+        result = (Math.sqrt(savedData1)).toFixed(2)
     }
     console.log(result)
     display.innerText = result
     savedData1 = result
 }
 
-
-
 enterButton.addEventListener('click', calculus)
-
-// function decimalSeparator() {
-//     newEntry = "."
-//     inputContent.push(newEntry)
-//     console.log(inputContent)
-//     input.value = inputContent.join("")
-//     console.log(inputContent.join(""))
-// }
-// function addition()  {
-//     newEntry = ('  +  ')
-//     data1 = inputContent.join("")
-//     input.value = newEntry
-//     p.innerText = data1
-//     console.log(input.value)
-// }
