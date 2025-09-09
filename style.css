@@ -22,7 +22,7 @@ section {
     box-sizing: border-box;
     height: 530px;
     max-height: 100%;
-    width: 425px;
+    width: 430px;
     max-width: 90%;
     margin: auto;
     background: linear-gradient(black,white);
@@ -52,7 +52,7 @@ p{
     border: 5px solid white;
     width: 30px;
     height: 70px;
-    
+    box-sizing: border-box;
     padding-right: 20px;
     margin: auto;
     margin-bottom: 10px;

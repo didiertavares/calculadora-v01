@@ -56,7 +56,7 @@ mathOps.forEach(button => {
 
 function calculus() {
     savedData2 = dataFormatted
-    if (operValue === '+') {
+    if (operValue === "+") {
         result = (savedData1 + savedData2).toFixed(2)
     } else if (operValue === "-") {
         result = (savedData1 - savedData2).toFixed(2)
@@ -68,6 +68,7 @@ function calculus() {
         } else {
             result = (savedData1 / savedData2).toFixed(2)
         }
+
     } else if (operValue ==='²') {
         result = (savedData1 ** 2).toFixed(2)
     } else if (operValue ==='yˣ') {
@@ -78,6 +79,8 @@ function calculus() {
     console.log(result)
     display.innerText = result
     savedData1 = result
+    operValue = null
+    result = null
 }
 
 enterButton.addEventListener('click', calculus)
