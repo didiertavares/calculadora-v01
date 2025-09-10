@@ -54,30 +54,38 @@ mathOps.forEach(button => {
     })
 })
 
+function displayResult() {
+    if (Number.isInteger(result)) {
+        display.innerText = result
+    } else {
+        display.innerText = result.toFixed(2)
+    }
+}
+
 function calculus() {
     savedData2 = dataFormatted
+    console.log(savedData2)
     if (operValue === "+") {
-        result = (savedData1 + savedData2).toFixed(2)
+        result = savedData1 + savedData2
     } else if (operValue === "-") {
-        result = (savedData1 - savedData2).toFixed(2)
+        result = savedData1 - savedData2
     } else if (operValue === "*") {
-        result = (savedData1 * savedData2).toFixed(2)
+        result = savedData1 * savedData2
     } else if (operValue === "/") {
         if (savedData2 === 0) {
             result = "error"
         } else {
-            result = (savedData1 / savedData2).toFixed(2)
+            result = savedData1 / savedData2
         }
-
     } else if (operValue ==='²') {
-        result = (savedData1 ** 2).toFixed(2)
+        result = savedData1 ** 2
     } else if (operValue ==='yˣ') {
-        result = (savedData1 ** savedData2).toFixed(2)
+        result = savedData1 ** savedData2
     } else {
-        result = (Math.sqrt(savedData1)).toFixed(2)
+        result = Math.sqrt(savedData1)
     }
     console.log(result)
-    display.innerText = result
+    displayResult()
     savedData1 = result
     operValue = null
     result = null
