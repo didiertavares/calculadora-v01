@@ -15,27 +15,29 @@ body{
     place-content: center;
     user-select: none;
 }
+
 section {
     border: 5px solid white;
-    padding: 20px;
+    padding: 5%;
     border-radius: 30px;
     box-sizing: border-box;
     height: 530px;
     max-height: 100%;
-    width: 430px;
-    max-width: 90%;
-    margin: auto;
+    
+    max-width: 100%;
+    
     background: linear-gradient(black,white);
     box-shadow: 5px 5px 7px black;
     flex-wrap: wrap;
 }
+
 button  {
     font-size: 20px;
     height: 70px;
     width: 70px;
     background-color: white;
     font-weight: bold;
-    border-radius: 15px;
+    border-radius: 20%;
     margin: 5px;
     cursor: pointer;
     
@@ -63,4 +65,8 @@ p{
     text-align: right;
     border-radius: 15px;
     background: lightgrey;
+}
+
+@media (max-width: 600px) {
+  
 }
