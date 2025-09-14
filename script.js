@@ -77,8 +77,6 @@ function calculus() {
         } else {
             result = savedData1 / savedData2
         }
-    } else if (operValue ==='²') {
-        result = savedData1 ** 2
     } else if (operValue ==='yˣ') {
         result = savedData1 ** savedData2
     } else {
@@ -89,6 +87,18 @@ function calculus() {
     savedData1 = result
     operValue = null
     result = null
+}
+
+function clearData() {
+    data.length = 0
+    operValue = null
+    result = null
+    keyValue = null
+    savedData1 = null
+    savedData2 = null
+    dataFormatted = Number(data)
+    display.innerText = dataFormatted
+    console.log(dataFormatted)
 }
 
 enterButton.addEventListener('click', calculus)
